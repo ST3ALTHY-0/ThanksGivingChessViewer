@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chess.com Game Viewer</title>
+    <script src="https://cdn.jsdelivr.net/npm/@mliebelt/pgn-viewer@1.6.11/lib/dist.min.js"></script>
+    <!-- Chess board viewer we  grab from online to allow us to see the moves played -->
+    <script src="app.js" defer></script>
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        input,
+        button,
+        select {
+            margin: 5px 0;
+            padding: 5px;
+        }
+
+        #game {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Chess.com Game Viewer</h2>
+    <h4>This will show my latest chess game (I am stealth0418) from chess.com using their api.
+        <br>
+        You can change this to show someone elses games as well
+    </h4>
+
+    <label>Username: <input type="text" id="username" value="stealth0418"></label>
+    <label>Year: <input type="number" id="year" value="2025"></label>
+    <label>Month: <input type="number" id="month" value="11" min="1" max="12"></label>
+    <button id="loadBtn">Load Games</button>
+
+    <div>
+        <label>Select Game:
+            <select id="gameSelect">
+                <option value="">No games loaded</option>
+            </select>
+        </label>
+    </div>
+
+    <div id="status"></div>
+    <div id="board" style="width:600px; height:600px; margin-top:20px;"></div>
+
+
+</body>
+
+</html>
